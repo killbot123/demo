@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
   	ccm.vm.box = "generic/fedora36"
 	ccm.vm.hostname = "ccm.local"
         ccm.vm.provision "shell", inline: "git clone https://github.com/killbot123/demo; bash demo/CCM/startup.sh"
-	#ccm.vm.network "private_network", ip: "192.168.50.4"
+	ccm.vm.network "private_network", ip: "192.168.50.4"
   end
   config.vm.define "umc" do |umc|
   	umc.vm.box = "roboxes/ubuntu2010"
