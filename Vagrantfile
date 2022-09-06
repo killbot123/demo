@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
   	umc.vm.box = "roboxes/ubuntu2010"
 	umc.vm.hostname = "umc.local"
         umc.vm.provision "shell", inline: "git clone https://github.com/killbot123/demo; bash demo/UMC/startup.sh"
-	umc.vm.network "private_network", ip: "192.168.50.4"
+	umc.vm.network "private_network", ip: "192.168.50.5"
   end
 
   # Disable automatic box update checking. If you disable this, then
