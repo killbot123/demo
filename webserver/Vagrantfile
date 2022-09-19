@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
 config.vm.define "webserver" do |web|
   	web.vm.box = "roboxes/ubuntu2010"
 	web.vm.hostname = "webserver.local"
-        web.vm.provision "shell", inline: "git clone https://github.com/killbot1 23/demo/WEB; bash WEB/startup.sh"
+        web.vm.provision "shell", inline: "git clone https://github.com/killbot123/demo; bash demo/WEB/startup.sh"
 	web.vm.network "private_network", ip: "192.168.50.6"
         web.vm.network "forwarded_port", guest: 80, host: 8080
   end
