@@ -19,6 +19,7 @@ config.vm.define "webserver" do |web|
         web.vm.provision "shell", inline: "git clone https://github.com/killbot123/demo; bash demo/WEB/startup.sh"
 	web.vm.network "private_network", ip: "192.168.50.6"
         web.vm.network "forwarded_port", guest: 80, host: 8080
+	web.vm.synced_folder "./webcontent/", "/var/www/html/", type: "rsync"
   end
 
 
