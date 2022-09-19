@@ -6,3 +6,4 @@ echo "HOME is $HOME"
 nmcli c delete "Wired connection 1"
 nmcli c add type ethernet conn.id eth1 ifname eth1 ipv4.method manual ipv4.address "192.168.50.4/24"
 echo "192.168.50.5  umc" >> /etc/hosts
+ip addr show dev eth1
